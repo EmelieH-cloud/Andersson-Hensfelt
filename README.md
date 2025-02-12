@@ -49,6 +49,15 @@ Exempel:
 - `ThemeProvider` "wrappar" in de andra komponenterna (`SomeComponent` och `AnotherComponent`), vilket gör att dessa får tillgång till temat genom **React Context**.
 - **`children`** används för att beskriva dessa "under-komponenter".
 
+### Skillnaden mellan props och children
+
+props är ett objekt som innehåller all data som skickas till en komponent, medan children är en speciell del av detta objekt.
+children är det som placeras inuti en komponent när den används. Det kan vara allt från text, andra komponenter eller till
+och med hela träd av komponenter.
+
+![image](https://github.com/user-attachments/assets/5b661431-962b-4aa1-b03e-c89d0cf977e3)
+
+
 ### Vad betyder ``` { children: ReactNode } ```
 Efter att vi destrukturerat och tagit emot children, behöver vi tala om vilken typ children ska vara. Här är varför det behövs:
 
