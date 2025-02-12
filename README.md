@@ -24,29 +24,24 @@ Sammanfattning:
 **`ThemeProvider`** är som en **låda (provider)** som erbjuder information till alla komponenter som ligger inuti den.  
 Den gör det möjligt för hela din app att ha tillgång till kontexten utan att behöva skicka det till varje komponent individuellt.
 
-### **Så här fungerar `ThemeProvider`**:
-```tsx
-// ThemeProvider är en komponent som hanterar och delar context, (exempelvis temat) i hela appen
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [theme, setTheme] = useState<Theme>(() => {
-        return (localStorage.getItem("theme") as Theme) || "light";
-    });
+![image](https://github.com/user-attachments/assets/3799713d-fdd3-4d9b-9e15-fdcede8929e0)
 
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light"; // Byt tema
-        setTheme(newTheme); // Uppdatera state
-        localStorage.setItem("theme", newTheme); // Spara i localStorage
-    };
+Första delen:
 
-    return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
-};
-```
----
+![image](https://github.com/user-attachments/assets/96969f0e-5600-4168-acf5-df8a24930634)
 
+Men i många fall vill vi inte skriva props varje gång vi ska åt en viss prop, här kommer destrukturering in i bilden.
+Man hade lika gärna kunnat skriva:
+
+![image](https://github.com/user-attachments/assets/dacaf3f4-4078-4fc8-b186-606098c84ee5)
+
+![image](https://github.com/user-attachments/assets/db304f98-2bcf-4561-b36c-e8018817eab0)
+
+## Destrukturering är som en genväg:
+Istället för att skriva ut props.children varje gång, får vi children direkt.
+Vi tar bort behovet av att skriva props hela tiden och gör koden enklare.
+
+--- 
 ### **3. Vad är `children` i React?**
 
 `children` är ett sätt i React att beskriva de komponenter som finns inuti en annan komponent. I vårt fall när vi använder `ThemeProvider`, betyder det alla de komponenter som ligger inom denna provider och vill använda temat.
