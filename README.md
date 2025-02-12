@@ -1,9 +1,7 @@
 
 
 
-## React Context 
-
-### **1. Vad är React Context?**
+### **Vad är React Context?**
 
 **React Context** kan liknas vid en stor låda som innehåller information som vi vill dela med flera delar av vår applikation 
 (komponenter) utan att behöva skicka den genom props för varje komponent. Istället kan alla komponenter få tillgång till
@@ -14,7 +12,7 @@ I React gör vi det så här:
 2. Skapar en **provider** som gör datan tillgänglig för alla komponenter som vill hämta den. 
 3. Använder en **hook** för att hämta den datan där vi behöver den.
 
-### **2. Vad är `ThemeProvider`?**
+### **Vad är `ThemeProvider`?**
 
 **`ThemeProvider`** är som en **låda (provider)** som erbjuder information till alla komponenter som ligger inuti den.  
 Den gör det möjligt för hela din app att ha tillgång till kontexten utan att behöva skicka det till varje komponent individuellt.
@@ -36,7 +34,7 @@ Istället för att skriva ut props.children varje gång, får vi children direkt
 Vi tar bort behovet av att skriva props hela tiden och gör koden enklare.
 
 --- 
-### **3. Vad är `children` i React?**
+### **Vad är `children` i React?**
 
 `children` är ett sätt i React att beskriva de komponenter som finns inuti en annan komponent. 
 
@@ -69,7 +67,7 @@ Eftersom TypeScript är strikt med typer vill vi ange att children kan vara någ
 
 ---
 
-### **4. Varför behöver vi Types i TypeScript?**
+### **Varför behöver vi Types i TypeScript?**
 
 TypeScript hjälper oss att skriva mer robust kod genom att lägga till **typer** som säkerställer att vi inte gör fel. I det här fallet, genom att skapa en **typ för `Theme`**, vet vi att temat bara kan vara `"light"` eller `"dark"`. 
 
@@ -88,7 +86,7 @@ Detta gör det lättare att hitta fel och ger oss en tydlig förståelse för vi
 
 ---
 
-### **5. Hur använder vi allt tillsammans?**
+### **Hur använder vi allt tillsammans?**
 
 ![image](https://github.com/user-attachments/assets/6f048650-fd0b-4f3b-bbde-cc3c32476304)
 
