@@ -5,6 +5,7 @@ const Landingpage = () => {
   return (
     <div>
         <ThemeToggleButton/>
+        <h1>hej</h1>
     </div>
   )
 }

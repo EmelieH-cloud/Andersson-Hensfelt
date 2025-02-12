@@ -1,12 +1,15 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App'
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 import { HashRouter } from 'react-router-dom';
+import { ThemeProvider } from './../context/ThemeContext'; // Importera ThemeProvider
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <HashRouter>
-    <App />
+    <HashRouter>
+      <ThemeProvider>  {/* Omslut hela appen med ThemeProvider */}
+        <App />
+      </ThemeProvider>
     </HashRouter>
   </StrictMode>,
-)
+);
