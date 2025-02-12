@@ -25,8 +25,7 @@ Första delen:
 
 ![image](https://github.com/user-attachments/assets/96969f0e-5600-4168-acf5-df8a24930634)
 
-Men i många fall vill vi inte skriva props varje gång vi ska åt en viss prop, här kommer destrukturering in i bilden.
-Man hade lika gärna kunnat skriva:
+Men man hade lika gärna kunnat skriva: 
 
 ![image](https://github.com/user-attachments/assets/dacaf3f4-4078-4fc8-b186-606098c84ee5)
 
