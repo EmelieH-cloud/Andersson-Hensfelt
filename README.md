@@ -92,43 +92,5 @@ Här är hela flödet i appen:
 3. **`useState` och `toggleTheme`** låter oss lagra och byta mellan temana ("light" och "dark").
 4. **`useContext`** används för att hämta temat i en annan komponent via vår custom hook `useTheme`.
 
-### **Exempel:**
-
-```tsx
-import { createContext, useContext, useState, ReactNode } from "react";
-
-// Skapa en typ för temat
-type Theme = "light" | "dark";
-
-// Skapa ett interface för ThemeContext
-interface ThemeContextType {
-    theme: Theme;
-    toggleTheme: () => void;
-}
-
-// Skapa en context för temat
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-// Skapa en provider som gör temat tillgängligt för hela appen
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [theme, setTheme] = useState<Theme>("light");
-
-    const toggleTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
-    };
-
-    return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
-};
-
-// Skapa en custom hook för att få åtkomst till temat
-export const useTheme = () => {
-    const context = useContext(ThemeContext);
-    if (!context) throw new Error("useTheme måste användas inom ThemeProvider");
-    return context;
-};
-```
+![image](https://github.com/user-attachments/assets/6f048650-fd0b-4f3b-bbde-cc3c32476304)
 
