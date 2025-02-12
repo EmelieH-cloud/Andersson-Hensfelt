@@ -1,7 +1,7 @@
 import React from 'react'
 import ThemeToggleButton from '../ThemeButton/ThemeToggleButton'
 
-const landingpage = () => {
+const Landingpage = () => {
   return (
     <div>
         <ThemeToggleButton/>
@@ -9,4 +9,4 @@ const landingpage = () => {
   )
 }
 
-export default landingpage
+export default Landingpage
