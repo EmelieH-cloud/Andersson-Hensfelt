@@ -14,11 +14,6 @@ I React gör vi det så här:
 2. Skapar en **provider** som gör datan tillgänglig för alla komponenter som vill hämta den. 
 3. Använder en **hook** för att hämta den datan där vi behöver den.
 
-Sammanfattning:
-- Contexten **lagrar data**.
-- Providern **delar ut data** 
-- Hooken används för att **hämta data**
-
 ### **2. Vad är `ThemeProvider`?**
 
 **`ThemeProvider`** är som en **låda (provider)** som erbjuder information till alla komponenter som ligger inuti den.  
@@ -44,7 +39,7 @@ Vi tar bort behovet av att skriva props hela tiden och gör koden enklare.
 --- 
 ### **3. Vad är `children` i React?**
 
-`children` är ett sätt i React att beskriva de komponenter som finns inuti en annan komponent. I vårt fall när vi använder `ThemeProvider`, betyder det alla de komponenter som ligger inom denna provider och vill använda temat.
+`children` är ett sätt i React att beskriva de komponenter som finns inuti en annan komponent. 
 
 Exempel:
 ```tsx
@@ -56,6 +51,22 @@ Exempel:
 
 - `ThemeProvider` "wrappar" in de andra komponenterna (`SomeComponent` och `AnotherComponent`), vilket gör att dessa får tillgång till temat genom **React Context**.
 - **`children`** används för att beskriva dessa "under-komponenter".
+
+### Vad betyder ``` { children: ReactNode } ```
+Efter att vi destrukturerat och tagit emot children, behöver vi tala om vilken typ children ska vara. Här är varför det behövs:
+
+I React kan children vara många olika typer av innehåll:
+
+- Text (t.ex. "Hello World")
+- JSX-element (t.ex. <div>Content</div>)
+- Andra komponenter (t.ex. <SomeComponent />)
+
+Eftersom TypeScript är strikt med typer vill vi ange att children kan vara något av dessa typer. Här använder vi en typ som heter ReactNode,
+ som representerar alla möjliga typer av innehåll i React.
+
+## Sammanfattning
+
+![image](https://github.com/user-attachments/assets/b29b8cd8-b196-4dbd-9bdb-38a1dda688cc)
 
 ---
 
