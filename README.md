@@ -85,12 +85,5 @@ Detta gör det lättare att hitta fel och ger oss en tydlig förståelse för vi
 
 ### **5. Hur använder vi allt tillsammans?**
 
-Här är hela flödet i appen:
-
-1. **`ThemeProvider`** skapar en **central plats** (Context) för att hantera temat.
-2. **`children`** gör att alla komponenter **inuti ThemeProvider** får tillgång till temat.
-3. **`useState` och `toggleTheme`** låter oss lagra och byta mellan temana ("light" och "dark").
-4. **`useContext`** används för att hämta temat i en annan komponent via vår custom hook `useTheme`.
-
 ![image](https://github.com/user-attachments/assets/6f048650-fd0b-4f3b-bbde-cc3c32476304)
 
