@@ -4,9 +4,8 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 Denna kod hanterar applikationens tema (ljus eller mörk) med hjälp av React Context.
 
 ThemeProvider:
-ThemeProvider är en komponent som fungerar som en provider för vårt tema. Den håller reda på
-det aktuella temat (antingen "light" eller "dark") genom en useState-hook. Den innehåller
-också en funktion (toggleTheme) som byter mellan dessa två teman.
+Håller reda på det aktuella temat (antingen "light" eller "dark") genom en useState-hook.
+Den innehåller också en funktion (toggleTheme) som byter mellan dessa två teman.
 
 useTheme:
 useTheme är en custom hook som gör det enkelt att konsumera (läsa) kontexten. 

@@ -1,0 +1,13 @@
+/* Ljust tema */
+body.light-theme 
+{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Mörkt tema */
+body.dark-theme 
+{
+    background-color: #333333;
+    color: #ffffff;
+}
