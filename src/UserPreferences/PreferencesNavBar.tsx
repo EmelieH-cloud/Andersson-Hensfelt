@@ -4,10 +4,9 @@ import ThemeToggleButton from '../ThemeButton/ThemeToggleButton';
 
 const PreferencesNavBar = () => {
   return (
-    <div>
+    <div className='preferences-container'>
         <LanguageToggleButton/>
         <ThemeToggleButton/>
-
     </div>
   )
 }

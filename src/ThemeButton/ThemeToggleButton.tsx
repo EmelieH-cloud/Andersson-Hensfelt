@@ -10,6 +10,9 @@ const ThemeToggleButton = () => {
   // Hämta på liknande sätt värdet på theme för att veta vilket språk det ska vara på theme-knappen.
   const {language} = useLanguage();
 
+  // dynamisk css-klass: 
+const textClass = theme === 'darkmode' ? 'dark-text' : 'light-text';
+
   useEffect(() => {
     // Uppdatera body-klassen när temat ändras
     if (theme === "darkmode") 
@@ -18,7 +21,6 @@ const ThemeToggleButton = () => {
       document.body.classList.remove("light-theme");
     } 
 
-    
     else
      {
       document.body.classList.add("light-theme");
@@ -27,12 +29,12 @@ const ThemeToggleButton = () => {
   }, [theme]); // körs varje gång värdet på 'theme' ändras, det vill säga varje gång man trycker på knappen som ändrar temat.  
 
   return (
-    <button onClick={toggleTheme}>
-     {language === "Svenska" ?
-      (theme === "lightmode" ? "Ljust läge" : "Mörkt läge") : (theme === "lightmode" ? "Lightmode" : "Darkmode")}
+    <a style={{ textDecoration: 'none' }} onClick={toggleTheme} className={`global-a ${textClass}`}>
+     {language === "Svenska" ? (theme === "lightmode" ? "Ljust läge" : "Mörkt läge")
+     : (theme === "lightmode" ? "Lightmode" : "Darkmode")}
    
  
-    </button>
+    </a>
   );
 };
 

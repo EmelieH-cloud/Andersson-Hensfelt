@@ -1,17 +1,21 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+import { useTheme } from '../../context/ThemeContext';
 import { useLanguage } from '../../context/LanguageContext'
 
 const LanguageToggleButton = () => {
 
- // destrukturera language och toggleLanguage() från context 
+ // destrukturera language och toggleLanguage() från LanguageContext: 
    const {language, toggleLanguage} = useLanguage();
+   // destrukturera theme från ThemeContext:
+   const {theme} = useTheme();
 
+// dynamisk css-klass: 
+const textClass = theme === 'darkmode' ? 'dark-text' : 'light-text';
 
   return (
-    <Button onClick={toggleLanguage}>
+    <a style={{ textDecoration: 'none' }} onClick={toggleLanguage} className={`global-a ${textClass}`}>
     {language === "Svenska" ? "Svenska" : "English"}
-    </Button>
+    </a>
   )
 }
 

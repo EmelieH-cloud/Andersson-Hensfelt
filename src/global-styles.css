@@ -1,0 +1,31 @@
+
+.global-a
+{
+    margin: 8px;
+    padding: 5px;
+}
+
+.light-text
+{
+    color: black;
+}
+
+.dark-text
+{
+   
+    color: white; 
+ 
+}
+
+.preferences-container
+{
+    display: flex; 
+    width: 100vw; 
+    justify-content: flex-end;
+}
+
+a:hover
+{
+    cursor: pointer;
+    
+}

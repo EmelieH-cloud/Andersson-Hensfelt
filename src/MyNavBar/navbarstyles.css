@@ -7,3 +7,8 @@
     border: none !important;
     /* Tar bort kantlinjen */
 }
+
+.dark-navbar
+{
+   color: white;
+}
