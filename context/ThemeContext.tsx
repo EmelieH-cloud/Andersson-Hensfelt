@@ -13,7 +13,7 @@ Den hämtar kontexten via Reacts useContext-hook och kastar ett fel om
 den används utanför en ThemeProvider.
 */
 
-type Theme = "light" | "dark";
+type Theme = "lightmode" | "darkmode" ;
 
 interface ThemeContextType {
   theme: Theme;
@@ -24,10 +24,10 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("lightmode");
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === "lightmode" ? "darkmode" : "lightmode"));
   };
 
   return (

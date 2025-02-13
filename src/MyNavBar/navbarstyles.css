@@ -1,0 +1,9 @@
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    /* Tar bort den blåa ringen */
+    box-shadow: none !important;
+    /* Tar bort Bootstrap's default glow */
+    border: none !important;
+    /* Tar bort kantlinjen */
+}

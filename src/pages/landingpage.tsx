@@ -1,10 +1,12 @@
 import React from 'react'
-import ThemeToggleButton from '../ThemeButton/ThemeToggleButton'
+import MyNavBar from '../MyNavBar/MyNavBar'
+import PreferencesNavBar from '../UserPreferences/PreferencesNavBar'
 
 const Landingpage = () => {
   return (
     <div>
-        <ThemeToggleButton/>
+        <PreferencesNavBar/>
+        <MyNavBar/>
         <h1>hej</h1>
     </div>
   )
