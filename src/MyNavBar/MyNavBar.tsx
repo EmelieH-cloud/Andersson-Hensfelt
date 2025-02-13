@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { RxHamburgerMenu } from "react-icons/rx"; 
 import { useTheme } from '../../context/ThemeContext';
 import { useLanguage } from '../../context/LanguageContext';
+import logo from '../assets/logo.png';
+import logo2 from '../assets/logo2.png';
 
 function MyNavBar() {
   // destrukturera 'language' från LanguageContext 
@@ -14,16 +16,17 @@ function MyNavBar() {
   // destrukturera 'theme' från ThemeContext
   const { theme } = useTheme();
 
-  // dynamiska css-klasser
-  const navbarBg = theme === 'darkmode' ? 'dark-navbar' : 'light-navbar';
+  // dynamiska css-klasser 
+  const logoimage = theme === 'darkmode' ? logo2 : logo;
   const navLinkColor = theme === 'darkmode' ? 'text-white' : 'text-dark'; // Dynamisk klass för textfärg
   const iconColor = theme === 'darkmode' ? 'white' : 'black'; // Dynamisk färg för hamburger-ikonen
 
   return (
-    <Navbar expand="lg" className={navbarBg}>
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <h1 className={`${navbarBg}`}>Hej</h1>
+   
+        <img src={logoimage} alt="Företagslogotyp" width="450" />
         </Navbar.Brand>
         
         {/* Anpassad hamburgermeny med RxHamburgerMenu */}
@@ -32,7 +35,7 @@ function MyNavBar() {
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link href="#home" className={navLinkColor}>
               {language === "Svenska" ? "Hem" : "Home"}
             </Nav.Link>

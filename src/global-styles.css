@@ -1,8 +1,14 @@
 
 .global-a
 {
-    margin: 8px;
+    margin-left: 15px;
     padding: 5px;
+    font-size: 13px;
+}
+
+.global-a:hover
+{
+    font-weight: 500;
 }
 
 .light-text
@@ -21,7 +27,9 @@
 {
     display: flex; 
     width: 100vw; 
-    justify-content: flex-end;
+    background-color: rgb(238, 238, 238);
+    justify-content: flex-start;
+
 }
 
 a:hover
@@ -29,3 +37,4 @@ a:hover
     cursor: pointer;
     
 }
+

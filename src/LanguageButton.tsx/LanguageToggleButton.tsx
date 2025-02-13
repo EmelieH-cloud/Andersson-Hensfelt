@@ -9,11 +9,10 @@ const LanguageToggleButton = () => {
    // destrukturera theme från ThemeContext:
    const {theme} = useTheme();
 
-// dynamisk css-klass: 
-const textClass = theme === 'darkmode' ? 'dark-text' : 'light-text';
+
 
   return (
-    <a style={{ textDecoration: 'none' }} onClick={toggleLanguage} className={`global-a ${textClass}`}>
+    <a style={{ textDecoration: 'none' }} onClick={toggleLanguage} className='global-a light-text'>
     {language === "Svenska" ? "Svenska" : "English"}
     </a>
   )

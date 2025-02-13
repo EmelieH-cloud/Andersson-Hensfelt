@@ -7,7 +7,7 @@ const Landingpage = () => {
     <div>
         <PreferencesNavBar/>
         <MyNavBar/>
-        <h1>hej</h1>
+       
     </div>
   )
 }
